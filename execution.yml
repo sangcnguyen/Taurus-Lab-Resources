@@ -1,0 +1,18 @@
+---
+execution:
+- concurrency: 10
+  hold-for: 2m
+  ramp-up: 40s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    requests:
+    - label: blazedemo
+      method: GET
+      url: http://blazedemo.com/
+    - body:
+        fromPort: Paris
+        toPort: Buenos Aires
+      label: reserve
+      method: POST
+      url: http://blazedemo.com/reserve.php

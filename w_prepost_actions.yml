@@ -1,0 +1,14 @@
+---
+services:
+- module: shellexec
+  prepare:
+  - rm -r tmp_logs
+  - mkdir tmp_logs
+  startup:
+  - echo 1 > tmp_logs/example.txt
+  - echo 2 >> tmp_logs/example.txt
+  shutdown:
+  - echo "shutdown time is $(date)" >> tmp_logs/example.txt
+  post-process:
+  - echo "this is a post process" >> tmp_logs/example.txt
+

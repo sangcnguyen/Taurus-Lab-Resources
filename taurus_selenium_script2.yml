@@ -1,0 +1,9 @@
+---
+execution:
+- executor: selenium
+  scenario:
+    script: ./selenium_python_chrome_script1.py
+  concurrency: 2
+  ramp-up: 15s
+  hold-for: 2m
+  iterations: 5

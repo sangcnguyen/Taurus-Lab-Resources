@@ -1,0 +1,19 @@
+---
+# modules:
+#   jmeter:
+#     path: jmeter-binary/bin/jmeter.bat
+#   blazemeter:
+#     token: 9160bf8c293cbe8602f72e5b:9143af33440d2bb6d24fe4db54532e997c4d4c397c6171c29c55f03b50060408320439f3  # API id and API secret joined with ':'
+
+execution:
+  - scenario:
+      think-time: 0.75
+      requests:
+        - http://blazedemo.com/
+        - http://blazedemo.com/reserve.php
+    concurrency: 10
+    ramp-up: 40s
+    hold-for: 2m
+    locations:
+      us-east-1: 1
+

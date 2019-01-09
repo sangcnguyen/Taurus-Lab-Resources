@@ -1,0 +1,23 @@
+---
+execution:
+- executor: selenium
+  scenario: simple
+  hold-for: 3m
+  concurrency: 3
+
+scenarios:
+  simple:
+    script: C:\Program Files\Taurus\Taurus Resources\SeleniumDemoPy.py
+
+modules:
+  selenium:
+    virtual-display:
+      width: 1024
+      height: 768
+    selenium-tools:
+      nose:
+        working-dir: work
+
+modules:
+  cloud:
+    test: Selenium Cloud Test

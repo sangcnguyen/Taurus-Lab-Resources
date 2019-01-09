@@ -1,0 +1,12 @@
+---
+execution:
+- executor: selenium
+  hold-for: 1m
+  scenario:
+    browser: Chrome  # available browsers are: ["Firefox", "Chrome", "Ie", "Opera"]
+    timeout: 10  #  global scenario timeout for connecting, receiving results, 30 seconds by default
+    think-time: 1s500ms  # global scenario delay between each request
+    requests:
+    - url: http://www.blazedemo.com/  # url to open, only get method is supported
+    - url: http://www.blazedemo.com/vacation.php  # url to open, only get method is supported
+    - url: http://www.blazemeter.com/

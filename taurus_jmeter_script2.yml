@@ -1,0 +1,14 @@
+---
+modules:
+  jmeter:
+    path: jmeter-binary/bin/jmeter.bat
+  blazemeter:
+    token: 9160bf8c293cbe8602f72e5b:9143af33440d2bb6d24fe4db54532e997c4d4c397c6171c29c55f03b50060408320439f3  # API id and API secret joined with ':'
+
+execution:
+- executor: jmeter
+  scenario:
+    script: jmeter_script1.jmx
+- executor: jmeter
+  scenario:
+    script: jmeter_script2.jmx

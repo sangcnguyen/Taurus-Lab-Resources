@@ -1,0 +1,14 @@
+---
+execution:
+- concurrency: 5
+  hold-for: 3600s
+  iterations: 125
+  ramp-up: 60s
+  scenario: Thread Group
+scenarios:
+  Thread Group:
+    requests: http://blazedemo.com/
+    store-cache: true
+    store-cookie: true
+    use-dns-cache-mgr: false
+
